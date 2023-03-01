@@ -1,0 +1,2 @@
+
+ffmpeg -rtsp_transport tcp -i rtsp://admin:EZCMNT@192.168.50.170:554/H.264 -c:v libx264 -preset veryfast -tune zerolatency -g 10 -c:a aac -f hls -hls_time 1 -hls_list_size 600 -hls_flags delete_segments+append_list+omit_endlist -hls_segment_filename C:/Users/Jared/Documents/GitHub/Rhyno/svelte-frontend/public/video/stream_%03d.ts  C:/Users/Jared/Documents/GitHub/Rhyno/svelte-frontend/public/video/stream.m3u8
